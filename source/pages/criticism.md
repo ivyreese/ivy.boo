@@ -24,7 +24,8 @@ But criticism sometimes aspires to more:
 2. How are appetites changing? How is the world changing?
 3. What's the point of criticism, and the relation between the creator, the audience, and the critic?
 
-I'm on a criticism kick. Here's
+I'm on a criticism kick. Here's:
+
 > A critic's task is revelation. To reveal something about the game, something about the player, something about the world outside the game. Can be hidden or obvious. Something profound. It should be uncomfortable. Not just "that's different", but estranging, defamiliarizing, disorienting.
 
 I appreciate criticism — cherish it — because it feels like my inner monologue. I feel an expanded sense of self when I read certain critics. I think it's because I [fancy myself an artist](/type) in almost everything I do.
