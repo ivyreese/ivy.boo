@@ -2,7 +2,7 @@ do ()->
 
   posterize = 4 # how many different color bands (per channel)
   dither = 0.5 # how much noise to add when posterizing
-  tableSize = 8192 # small values show repeating patterns that are very sensitive to the image size
+  tableSize = 17 # small values show repeating patterns that are very sensitive to the image size
 
   # dommy mommy
   elm = document.querySelector "profile-pic div"
@@ -123,7 +123,8 @@ do ()->
     unmix = 1 - mix
 
     for k in [0...tableSize]
-      bias[k] = dither * step - light
+      bias[k] = dither * step * noise[k]
+      bias[k] -= light
 
     i = 0
     p = 0
