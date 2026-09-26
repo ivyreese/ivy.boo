@@ -35,10 +35,10 @@ do ()->
       redBlobs:   h: [350, 40],  s: [40, 10], l: [65, 10]
       blackBlobs: h: 11,         s: 41,       l: [3, 2]
     bio:
-      stars:      h: [15, 40],   s: 35,       l: [50, 80]
-      blueBlobs:  h: [80, 10],   s: [20, 10], l: [60, 10]
-      redBlobs:   h: [350, 50],  s: [50, 30], l: [60, 10]
-      blackBlobs: h: 11,         s: 41,       l: [3, 2]
+      stars:      h: [330, 10],  s: 100,      l: [90, 10]
+      blueBlobs:  h: [345, 10],  s: [30, 10], l: [50, 15]
+      redBlobs:   h: [325, 20],  s: [50, 20], l: [40, 40]
+      blackBlobs: h: 320,        s: 100,      l: [8, 0]
     bw:
       stars:      h: [0, 0],     s: 0,        l: [0, 0]
       blueBlobs:  h: [0, 0],     s: [0, 0],   l: [0, 0]
@@ -220,12 +220,12 @@ do ()->
             maxRedBlobs = 0
             maxBlackBlobs = 0
           else if bio
-            maxPixelStars = 500
-            maxStars = 40
-            maxSmallGlowingStars = 30
-            maxBlueBlobs = 8
-            maxRedBlobs = 35
-            maxBlackBlobs = 6
+            maxPixelStars = 771
+            maxStars = 49
+            maxSmallGlowingStars = 49
+            maxBlueBlobs = 7
+            maxRedBlobs = 49
+            maxBlackBlobs = 7
           else if isInfinite
             maxPixelStars = 300
             maxStars = 60
@@ -286,7 +286,9 @@ do ()->
             y = mod y * height / randTableSize - pos * increase, height
             o = o / randTableSize * .5 + 0.01
             r = r / randTableSize * 1 + .5
-            firstDrawCall x, y, r * dScaleHalfDpi, "hsl(#{300} #{0}% #{100}% / #{o*alpha*odensity})", increase
+            o = o*alpha*odensity
+            if o > 0
+              firstDrawCall x, y, r * dScaleHalfDpi, "hsl(#{300} #{0}% #{100}% / #{o})", increase
             i++
 
 

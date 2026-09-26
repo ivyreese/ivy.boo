@@ -12,8 +12,8 @@
 
 :root {
   --maxLineLength: 48em; /* changed from 56em for the sake of the journal — RIP? */
-  --link-hover: hsl(311, 100%, 25%);
-  --black: hsl(311, 100%, 10%);
+  --link-hover: hsl(329, 100%, 25%);
+  --black: hsl(329, 100%, 21%);
 }
 
 @keyframes fade-in {
