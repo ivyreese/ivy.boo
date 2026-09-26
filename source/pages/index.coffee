@@ -1,8 +1,8 @@
 do ()->
 
-  posterize = 8 # how many different color bands (per channel)
-  dither = .2 # how much noise (tuned by eye to match Pixelmator's posterize, which is pretty)
-  tableSize = 4096 # small values show repeating patterns that are very sensitive to the image size
+  posterize = 4 # how many different color bands (per channel)
+  dither = 0.5 # how much noise to add when posterizing
+  tableSize = 8192 # small values show repeating patterns that are very sensitive to the image size
 
   # dommy mommy
   elm = document.querySelector "profile-pic div"
@@ -72,7 +72,7 @@ do ()->
 
     # the fade kicks in after a lil scrolling,
     # and then hits full strength after scrolling just over one full window height.
-    fadeTarget = @scale scrollTop, .3, 1.1
+    fadeTarget = @scale scrollTop, .4, 1.1
 
     # fadeTarget is clipped to go slightly past 1 so that we fade all the way
     # to white, even when spooky (cuz it sometimes darkens the photo).
@@ -113,15 +113,17 @@ do ()->
       phase += dt * absErr
       posterize = @scale Math.sin(phase), -2, 2, 1.5, 4
 
+    # fade goes from 0 to 1-ish
     light = 255 * fade ** (if document.spooky then 1 else 5)
+
     step = 255 / (posterize - 1)
     invStep = 1/step
 
-    mix = (@scale fade, 0, .5, 0, 1, true) ** 2
+    mix = (@scale fade, 0.3, .6, 0, 1, true)
     unmix = 1 - mix
 
-    for k in [0...noise.length]
-      bias[k] = noise[k] * step * dither + light
+    for k in [0...tableSize]
+      bias[k] = dither * step - light
 
     i = 0
     p = 0
