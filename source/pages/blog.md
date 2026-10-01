@@ -28,8 +28,9 @@ desc: Rubbing two brain cells for warmth.
   Hey, this page is… to say it is under "active development" would be misleadingly auspicious. This blog is palliative care for my ambitions. My big ideas lie here, wrong, like yolk seeping down the nest. If I haven't sent you a link to a specific post, then these pages aren't for you — they're for me. But… you can read them, because you understand.
 
   # 2026
-  Most of my recent writing is happening in my… ["Secret" Journal](/journal)
   [🍰](/🍰)
+  Most of my recent writing is happening in my… ["Secret" Journal](/journal)
+
 
   # 2025
   [These Words Mean The Same Thing (draft)](/these-words-mean-the-same-thing)
